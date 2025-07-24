@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Science</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter: wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'space': ['Space Grotesk', 'sans=serif'],
+                        'inter': ['Inter', 'sans-serif'],
+                    } ,
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 3s ease-in-out infinite',
+                        'gradient': 'gradient 8s ease-in-out infinite',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                        'slide-in': 'slideIn 0.6s ease-out',
+                        'bounce-slow': 'bounce 2s infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                        
+                    } ,
+                    keyframes : {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)'},
+                            '50%': { transform: 'translateY(-20px)'},
+                        },
+                        gradient: {
+                            '0%, 100%': { backgroundPosition: '0% 50%'},
+                            '50%': { backgroundPosition: '100% 0'},
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(100%)', opacity: '0'},
+                            '100%': { transform: 'translateY(0)', opacity: '1'},
+                        },
+                        slideIn: {
+                            '0%': {transform: 'translateX(-100px)', opacity: '0'},
+                            '100%': {transform: 'translateX(0)', opacity: '1'},
+                        },
+                        glow: {
+                            '0%': { boxSadow: '0 0 20px rgba(59, 130, 246, 0.3)'},
+                            '100%': { boxShadow: '0 0 40px rgba(59, 130, 246, 0.6)'},
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .bg-gradient-animated {
+            background: linear-gradient (-45deg, #1e1b4b, #312e81, #1e40af, #1d4ed8);
+            background-size: 400% 400%;
+            animation: gradient 8s ease infinite;
+        }
+        .glass-effect {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .hover-lift {
+            transition: all 0.3s cubic-bezier (0.25, 0.8, 0.25, 1);
+        }
+        .hover-lift:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            animation: float 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+</html>
+
+.particle {
+    /* ... other properties ... */
+    animation: float 1s ease-in-out infinite; /* This is already set to 1s based on our last interaction */
+}

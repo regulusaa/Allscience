@@ -1,0 +1,93 @@
+
+    /* Basic body styling for context */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex; /* Use flexbox for overall page layout */
+    flex-direction: column; /* Stack header, main, and footer vertically */
+    min-height: 100vh; /* Ensure the body takes up at least the full viewport height */
+}
+
+main {
+    flex: 1; /* Allow the main content to grow and push the footer down */
+    padding: 20px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333; /* Dark background */
+    color: #fff; /* White text color */
+    padding: 20px 0; /* Vertical padding, no horizontal padding */
+    text-align: center; /* Center-align text within the footer */
+    width: 100%; /* Ensure footer spans full width */
+    margin-top: auto; /* Push the footer to the bottom when content is short */
+}
+
+.footer-content {
+    max-width: 1200px; /* Limit content width for better readability */
+    margin: 0 auto; /* Center the content within the footer */
+    display: flex; /* Use flexbox for internal footer layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+    justify-content: space-around; /* Distribute items with space between them */
+    align-items: center; /* Vertically align items in the center */
+}
+
+.footer-content p {
+    margin: 10px 0; /* Adjust spacing for paragraph text */
+}
+
+.footer-links {
+    list-style: none; /* Remove bullet points from list */
+    padding: 0;
+    margin: 10px 0;
+    display: flex; /* Make links horizontal */
+    flex-wrap: wrap;
+    justify-content: center; /* Center links if they wrap */
+}
+
+.footer-links li {
+    margin: 0 15px; /* Space between list items */
+}
+
+.footer-links a {
+    color: #fff; /* White link color */
+    text-decoration: none; /* Remove underline from links */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.footer-links a:hover {
+    color: #00bcd4; /* Light blue on hover */
+}
+
+.social-media {
+    margin: 10px 0;
+}
+
+.social-media a {
+    display: inline-block; /* Allow spacing between icons */
+    margin: 0 10px;
+}
+
+.social-media img {
+    width: 30px; /* Size of social media icons */
+    height: 30px;
+    vertical-align: middle; /* Align icons nicely with text if any */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.social-media img:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stack footer items vertically */
+    }
+    .footer-links {
+        flex-direction: column; /* Stack links vertically */
+    }
+    .footer-links li {
+        margin: 5px 0; /* Adjust vertical margin for stacked links */
+    }
+}
